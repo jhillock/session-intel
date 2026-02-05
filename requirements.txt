@@ -1,0 +1,12 @@
+# Session Intelligence Dependencies
+
+# No external dependencies required!
+# Session Intelligence uses your local Claude Code installation
+# for LLM-powered classification and skill generation.
+#
+# Prerequisites:
+# - Python 3.8+ (standard library only)
+# - Claude Code CLI (https://www.anthropic.com/claude/code)
+#
+# To verify Claude Code is installed:
+#   claude --version
