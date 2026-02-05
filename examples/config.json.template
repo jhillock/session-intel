@@ -1,0 +1,83 @@
+{
+  "session_intel": {
+    "version": "0.1.0",
+    
+    "paths": {
+      "sessions": "~/.claude/projects/*/sessions/*.jsonl",
+      "database": "~/.session-intel/sessions.db",
+      "skills_global": "~/.claude/skills",
+      "reviews": "~/.session-intel/reviews"
+    },
+    
+    "claude_code": {
+      "command": "claude",
+      "timeout_seconds": 120,
+      "notes": "Uses your local Claude Code installation. No API costs."
+    },
+    
+    "classification": {
+      "thresholds": {
+        "high_struggle": 20,
+        "medium_struggle": 5,
+        "retry_chain_min": 3,
+        "tool_repetition_min": 3
+      },
+      
+      "intent_weights": {
+        "execution": {
+          "error": 2,
+          "retry": 2,
+          "correction": 3
+        },
+        "planning": {
+          "error": 0,
+          "retry": 0.25,
+          "correction": 3
+        },
+        "debug": {
+          "error": 0,
+          "retry": 1,
+          "correction": 3
+        },
+        "config": {
+          "error": 1,
+          "retry": 2,
+          "correction": 2
+        },
+        "research": {
+          "error": 0,
+          "retry": 0,
+          "correction": 3
+        },
+        "review": {
+          "error": 0,
+          "retry": 0,
+          "correction": 3
+        },
+        "startup": {
+          "error": 0,
+          "retry": 0,
+          "correction": 0
+        },
+        "unknown": {
+          "error": 1,
+          "retry": 1,
+          "correction": 2
+        }
+      }
+    },
+    
+    "enforcement": {
+      "min_sample_size": 10,
+      "reduction_threshold_pct": 20,
+      "usage_threshold_pct": 60,
+      "lookback_days": 90
+    },
+    
+    "analysis": {
+      "default_strategy": "all",
+      "auto_approve_skills": false,
+      "max_signals_per_cluster": 10
+    }
+  }
+}

@@ -1,0 +1,45 @@
+# Database
+sessions.db
+sessions.db-journal
+sessions.db-wal
+
+# Analysis reports (may contain personal data)
+reviews/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local config (with secrets)
+config.local.json
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+.session-intel.tmp
+/tmp/
